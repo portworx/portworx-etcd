@@ -23,3 +23,10 @@ etcd_client_cert_auth: false
 etcd_peer_client_cert_auth: false
 
 etcd_client_port: '2379'
+
+kube_use_node_system_container: false
+kube_use_master_system_container: false
+kube_use_etcd_system_container: false
+kube_use_flannel_system_container: false
+
+networking: flannel
