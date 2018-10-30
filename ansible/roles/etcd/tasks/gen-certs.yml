@@ -37,7 +37,7 @@
   run_once: true
   delegate_to: "{{ groups['etcd'][0] }}"
   environment:
-    NODE_IPS: "{% for host in groups['etcd'] %}{{ hostvars[host]['etcd_machine_address'] }}{% if not loop.last %},{% endif %}{% endfor %}"
+    NODE_IPS: "{% for host in groups['etcd'] %}{{ hostvars[host].ansible_default_ipv4.address }}{% if not loop.last %},{% endif %}{% endfor %}"
     NODE_DNS: "{{ groups['etcd']|join(',') }}"
     CERT_DIR: "{{ etcd_certs_dir }}"
     CERT_GROUP: "{{ etcd_cert_group }}"

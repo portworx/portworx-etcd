@@ -1,6 +1,6 @@
 ---
 etcd_source_type: "pass"
-etcd_version: 2.2.3
+etcd_version: 3.2.7
 
 etcd_client_port: 2379
 etcd_peer_port: 2380
@@ -10,8 +10,8 @@ etcd_client_legacy_port: 4001
 etcd_peer_legacy_port: 7001
 etcd_peers_group: etcd
 
-etcd_url_scheme: http
-etcd_peer_url_scheme: http
+etcd_url_scheme: https
+etcd_peer_url_scheme: https
 # Set correspondingly to true when use https values above to enable cert auth
 etcd_client_cert_auth: false
 etcd_peer_client_cert_auth: false
@@ -31,7 +31,7 @@ etcd_client_cert_file: "{{ etcd_certs_dir }}/client.crt"
 etcd_client_key_file: "{{ etcd_certs_dir }}/client.key"
 
 etcd_initial_cluster_state: new
-etcd_initial_cluster_token: etcd-k8-cluster
+etcd_initial_cluster_token: etcd-px-cluster
 
 # Interface on which etcd listens.
 # It is useful when you want define common network interface for etcd clusters and the interface is not connected to other machines (i.e. use same network interface for setup a etcd clusters),
