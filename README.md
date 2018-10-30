@@ -1,5 +1,14 @@
 # portworx-etcd
 
+### Prerequisites
+This playbook requires ansible 2.7
+To install/ upgrade ansible, execute
+```
+sudo apt-get install python-pip python-dev build-essential 
+sudo pip install --upgrade pip
+sudo pip install --upgrade ansible
+```
+
 ### To install
 * git clone https://github.com/satchpx/portworx-etcd.git
 * Create a file called `inventory`. Refer to `inventory.sample` and update it to match your environment
