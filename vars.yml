@@ -1,0 +1,25 @@
+# Account name of remote user. Ansible will use this user account to ssh into
+# the managed machines. The user must be able to use sudo without asking
+# for password unless ansible_sudo_pass is set
+#ansible_ssh_user: root
+
+# password for the ansible_ssh_user. If this is unset you will need to set up
+# ssh keys so a password is not needed.
+#ansible_ssh_pass: password
+
+# If a password is needed to sudo to root that password must be set here
+#ansible_sudo_pass: password
+
+# Required for CoreOS. CoreOS does not include a Python interpreter. The
+# pre-ansible role installs a python interpreter to /opt/bin/. For more
+# information see https://coreos.com/blog/managing-coreos-with-ansible.html
+#ansible_python_interpreter: "PATH=/opt/bin:$PATH python"
+
+# To enable etcd auto cert generation set the following *_scheme vars to "https"
+etcd_url_scheme: "https"
+etcd_peer_url_scheme: "https"
+# For etcd client and peer cert authentication set these to true
+etcd_client_cert_auth: true
+etcd_peer_client_cert_auth: true
+
+etcd_client_port: '2379'
