@@ -14,3 +14,5 @@ cd ./ansible/scripts
 ./deploy-etcd.sh
 
 ```
+
+[^1]: Credits: https://github.com/kubernetes/contrib/tree/master/ansible
