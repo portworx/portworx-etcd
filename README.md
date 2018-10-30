@@ -15,4 +15,4 @@ cd ./ansible/scripts
 
 ```
 
-[^1]: Credits: https://github.com/kubernetes/contrib/tree/master/ansible
+Credits: https://github.com/kubernetes/contrib/tree/master/ansible
