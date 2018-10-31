@@ -38,9 +38,9 @@ Update vars.yaml with ansible_user and ansible_password.
 Run the docker container that sets up, bootstraps and starts the etcd cluster with TLS
 ```
 cd ./portworx-etcd && \
-docker run --rm \
-  -v ./inventory.sample:/ansible/inventory/inventory \
-  -v ./vars.yml:/ansible/inventory/group_vars/all.yml \
+docker run -t --rm --net=host \
+  -v /path/to/inventory.sample:/ansible/inventory/inventory \
+  -v /path/to/vars.yml:/ansible/inventory/group_vars/all.yml \
   -e ANSIBLE_HOST_KEY_CHECKING=False \
   satchpx/px-etcd:latest
 ```
