@@ -3,11 +3,9 @@
 ## Set up an etcd cluster with TLS for portworx
 
 #### Before you begin
-```
-git clone https://github.com/satchpx/portworx-etcd.git
-Create a file called `inventory`. Refer to `inventory.sample` and update it to match your environment
-Update vars.yaml with ansible_user and ansible_password.
-```
+1. git clone https://github.com/satchpx/portworx-etcd.git
+2. Create a file called `inventory`. Refer to `inventory.sample` and update it to match your environment
+3. Update vars.yaml with ansible_user and ansible_password.
 
 #### Run the install
 Run the docker container that sets up, bootstraps and starts the etcd cluster with TLS
