@@ -32,7 +32,7 @@ sudo pip install --upgrade ansible
 ### To install
 * git clone https://github.com/satchpx/portworx-etcd.git
 * Create a file called `inventory`. Refer to `inventory.sample` and update it to match your environment
-* Update vars.yaml with ansible_user and ansible_password.
+* Enable passwordless ssh access between the ansible node and the targets. If not, update vars.yaml with ansible_user and ansible_password.
 * Run the following
 ```
 export ANSIBLE_HOST_KEY_CHECKING=False
